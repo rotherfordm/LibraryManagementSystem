@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B183C61B-B38B-4CA4-8FA5-4A3FF727DF8B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryManagementSystem</RootNamespace>
+    <AssemblyName>LibraryManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1400.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Book Forms\frm_addbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Forms\frm_addbook.Designer.cs">
+      <DependentUpon>frm_addbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book Forms\frm_addBookSupply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Forms\frm_addBookSupply.Designer.cs">
+      <DependentUpon>frm_addBookSupply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\frm_adminmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\frm_adminmenu.Designer.cs">
+      <DependentUpon>frm_adminmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseHandler.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="Student Form\frm_studentborrowedbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Form\frm_studentborrowedbook.Designer.cs">
+      <DependentUpon>frm_studentborrowedbook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Form\frm_studentmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Form\frm_studentmenu.Designer.cs">
+      <DependentUpon>frm_studentmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Form\frm_studentregistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Form\frm_studentregistration.Designer.cs">
+      <DependentUpon>frm_studentregistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report Forms\frm_bookSupplyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Forms\frm_bookSupplyReport.Designer.cs">
+      <DependentUpon>frm_bookSupplyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book Forms\frm_borrowBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Forms\frm_borrowBook.Designer.cs">
+      <DependentUpon>frm_borrowBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book Forms\frm_listOfBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Forms\frm_listOfBooks.Designer.cs">
+      <DependentUpon>frm_listOfBooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin Forms\frm_manageMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin Forms\frm_manageMembers.Designer.cs">
+      <DependentUpon>frm_manageMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book Forms\frm_returnedbooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Book Forms\frm_returnedbooks.Designer.cs">
+      <DependentUpon>frm_returnedbooks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report Forms\frm_borrowedBooksReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report Forms\frm_borrowedBooksReport.Designer.cs">
+      <DependentUpon>frm_borrowedBooksReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student Form\frm_studentreturnedbooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student Form\frm_studentreturnedbooks.Designer.cs">
+      <DependentUpon>frm_studentreturnedbooks.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Book Forms\frm_addbook.resx">
+      <DependentUpon>frm_addbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book Forms\frm_addBookSupply.resx">
+      <DependentUpon>frm_addBookSupply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\frm_adminmenu.resx">
+      <DependentUpon>frm_adminmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\frm_studentborrowedbook.resx">
+      <DependentUpon>frm_studentborrowedbook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\frm_studentmenu.resx">
+      <DependentUpon>frm_studentmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\frm_studentregistration.resx">
+      <DependentUpon>frm_studentregistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report Forms\frm_bookSupplyReport.resx">
+      <DependentUpon>frm_bookSupplyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book Forms\frm_borrowBook.resx">
+      <DependentUpon>frm_borrowBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book Forms\frm_listOfBooks.resx">
+      <DependentUpon>frm_listOfBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin Forms\frm_manageMembers.resx">
+      <DependentUpon>frm_manageMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Book Forms\frm_returnedbooks.resx">
+      <DependentUpon>frm_returnedbooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report Forms\frm_borrowedBooksReport.resx">
+      <DependentUpon>frm_borrowedBooksReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student Form\frm_studentreturnedbooks.resx">
+      <DependentUpon>frm_studentreturnedbooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
